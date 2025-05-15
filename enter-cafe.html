@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enter NeverApart Café</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Profile Entry</h1>
+    <form id="entry-form">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+
+      <label for="bio">Tell us about you:</label>
+      <textarea id="bio" name="bio" rows="4" placeholder="What makes you smile? ☕🌸" required></textarea>
+
+      <label for="photos">Upload up to 5 photos:</label>
+      <input type="file" id="photos" name="photos" accept="image/*" multiple>
+
+      <label for="humor">Your Humor Style:</label>
+      <select id="humor" name="humor">
+        <option value="dry">Dry</option>
+        <option value="playful">Playful</option>
+        <option value="dark">Dark</option>
+        <option value="goofy">Goofy</option>
+      </select>
+
+      <label for="vibe">Preferred Date Vibe:</label>
+      <select id="vibe" name="vibe">
+        <option value="quiet">Quiet Café</option>
+        <option value="walk">Park Walk</option>
+        <option value="gallery">Art Gallery</option>
+        <option value="surprise">Surprise Me</option>
+      </select>
+
+      <button type="submit">Enter the Café</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('entry-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("🌹 Welcome! Your profile is brewing.");
+      window.location.href = 'gesture-invite.html';
+    });
+  </script>
+</body>
+</html>
 <!-- Form for user input -->
