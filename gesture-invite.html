@@ -1,1 +1,42 @@
-<!-- Gesture offering screen -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gesture Invite – NeverApart Café</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Send a Gesture</h1>
+    <p>Select how you’d like to begin this connection:</p>
+
+    <div class="gesture">
+      <h3>☕ First Coffee – €1</h3>
+      <p>A warm hello over a shared thought.</p>
+      <button onclick="sendGesture('coffee1')">Send</button>
+    </div>
+
+    <div class="gesture">
+      <h3>☕ Second Coffee – €5</h3>
+      <p>Because one coffee just wasn’t enough.</p>
+      <button onclick="sendGesture('coffee2')">Send</button>
+    </div>
+
+    <div class="gesture">
+      <h3>🌹 Red Flower – €10</h3>
+      <p>Silent admiration, spoken in petals.</p>
+      <button onclick="sendGesture('flower')">Send</button>
+    </div>
+
+    <p class="coming">💬 Coming soon: secure gesture checkout integration</p>
+  </div>
+
+  <script>
+    function sendGesture(type) {
+      alert("Gesture sent! They'll feel it soon 💌");
+      window.location.href = 'private-chat-room.html';
+    }
+  </script>
+</body>
+</html>
