@@ -1,1 +1,75 @@
-<!-- Private chat room logic -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Private Chat Room – NeverApart Café</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .chat-box {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #fff5f8;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+    .messages {
+      height: 300px;
+      overflow-y: scroll;
+      background: #ffffff;
+      border: 1px solid #eee;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+    }
+    .messages p {
+      margin: 6px 0;
+    }
+    .input-group {
+      display: flex;
+    }
+    .input-group input {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px 0 0 6px;
+      border: 1px solid #ccc;
+    }
+    .input-group button {
+      padding: 10px 20px;
+      background: #a44a3f;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 0 6px 6px 0;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container chat-box">
+    <h2>Private Chat Lounge</h2>
+    <p>Speak softly. This room holds only your words. 🕯️</p>
+    <div class="messages" id="messages"></div>
+    <div class="input-group">
+      <input type="text" id="chat-input" placeholder="Type your message…">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script>
+    function sendMessage() {
+      const input = document.getElementById("chat-input");
+      const msg = input.value.trim();
+      if (!msg) return;
+      const box = document.getElementById("messages");
+      const line = document.createElement("p");
+      line.textContent = "You: " + msg;
+      box.appendChild(line);
+      input.value = "";
+      box.scrollTop = box.scrollHeight;
+    }
+  </script>
+</body>
+</html>
